@@ -8,9 +8,22 @@
 /simple-task-manager-application-using-angular-js-php-mysql/  /simple-task-manager-application-using-angularjs-php-mysql/             301
 /simple-file-upload-example-using-angularjs/embed/  /simple-file-upload-example-using-angularjs/             301
 /send-email-from-website-using-angularjs-and-nodejs/  /simple-project-demonstrates-how-to-send-email-using-nodejs/             301
-/setup-php-cron-jobs-at-godaddy/  /steps-to-configure-php-cron-jobs-godaddy/             301
 /generate-pdf-from-mysql-database-using-php/  /generate-pdf-using-php-from-mysql-database/             301
 /configure-amazon-ec2-for-nodejs-app-deployment/  /steps-to-configure-amazon-ec2-for-nodejs-app-deployment/             301
+/steps-configuring-php-cron-jobs-godaddy/  /steps-to-configure-php-cron-jobs-godaddy/             301
+/setup-php-cron-jobs-at-godaddy/  /steps-to-configure-php-cron-jobs-godaddy/             301
+/steps-configuring-php-cron-jobs-godaddy/index.html /steps-to-configure-php-cron-jobs-godaddy/             301
+/connecting-php-to-oracle-database-10g/index.html  /connecting-php-to-oracle-database-10g/             301
+/connecting-php-to-oracle-database-10g/ /connecting-php-to-oracle-database-10g/             301
+/steps-configuring-amazon-ec2-nodejs/index.html  /steps-to-configure-amazon-ec2-for-nodejs-app-deployment/             301
+/steps-configuring-amazon-ec2-nodejs/  /steps-to-configure-amazon-ec2-for-nodejs-app-deployment/             301
+/send-pdf-attachment-email-using-php/  /send-email-with-pdf-attachment-using-php/             301
+/send-pdf-attachment-email-using-php/index.html /send-email-with-pdf-attachment-using-php/             301
+/project-demo-send-mail-using-nodejs/index.html /simple-project-demonstrates-how-to-send-email-using-nodejs/             301
+/inventory-manager-using-angularjs-mysql-php/index.html /product-inventory-manager-using-angularjs-mysql-and-php-restful-api/             301
+/generate-pdf-using-php-mysql/index.html /generate-pdf-using-php-from-mysql-database/             301
+/generate-pdf-using-php-mysql/ /generate-pdf-using-php-from-mysql-database/             301
+
 /category/php/  /tag/php/             301
 /category/angularjs/  /tag/angularjs/             301
 /category/mysql/  /tag/mysql/             301
