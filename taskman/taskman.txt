@@ -1,0 +1,48 @@
+In this tutorial we will create an extremely simple url parser application using AngularJS. we will take help of angularjs and regex of html to achieve this [DEMO]
+
+This tutorial explains how to create a simple Task Manager application using angularjs. Here I used PHP for server side communication and MySQL for database. 
+
+Our task manager app will have the following features
+
+Create a new task
+Strikeout the completed tasks
+Option to delete any task
+User will be able to search for tasks
+
+1. Creating MySQL Database
+we will create the only table required for this project <strong>tasks</strong>
+
+2. The project structure
+We will arrange the project files for MVC framework into 6 different folders for better identification.
+
+3. The Stylesheets
+We will add some css for styling purpose
+
+4. Import the required javascript library
+
+5. The Controller Code
+
+
+js/ - Javascript library files. e.g. angular.js
+app/ - Our custom javascript controller files for our project
+partials/ - Small pagelets that we wish to reuse
+ajax/ - The .php files to communicate to server (Connect, Create, Read, Update, Delete)
+css/ - Style Sheet files
+img/ - Any required image files
+
+Basic requirements for a angularjs application
+
+Required Directives
+--------------
+ng-app
+ng-controller
+
+
+
+
+Why AngularJS 
+
+An MVC framework for single page application.
+AngularJS provides some bonus functionality over Javascript which makes our development task easier. 
+It has a great community support
+Have a very stiff learning curve

@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<title>Facebook Image Hover Menu Demo @2lessons</title>
+<style>
+#nav_menu{
+	width:900px;
+	margin:0 auto;
+}
+.drop{
+width:200px;height:200px;background: #f22fff;display:box;cursor:pointer;float:left;
+}
+
+#nav_menu  #edit_image {
+	position:relative;
+	width:220px;
+	margin:0 auto;
+}
+
+#nav_menu #edit_image:hover {
+	background: #ffffff;
+}
+
+.dropdown_2columns
+ {
+	position:absolute;
+	display:none; /* Hides the drop down */
+	cursor:pointer;
+	background:#ffffff;
+}
+#nav_menu  #edit_image:hover .dropdown_2columns{ 
+	left:90px;
+	float:right;
+	display:inline;
+	top:5px;
+}
+.img{
+background:transparent url('images/penciledit.gif') no-repeat scroll right top;
+height:18px;width:18px;
+float:left;
+}
+</style>
+<div style="background-color:#f2f2f2">
+<a href="http://www.2lessons.info"><img src="http://4.bp.blogspot.com/-5RL_78SJKQ8/UFn0JHtE55I/AAAAAAAAAOc/0KzdpV5TAJc/s1600/2lessons-logo.png"/></a>
+</div>
+<div id="nav_menu">
+<h1>Facebook Image Hover Menu using CSS</h1>
+    <div id="edit_image">
+    <div href="index.php" class="drop"><img src='images/hannah-montana.jpg' alt='Profile Image' width='200px' height='200px'/></div>
+    
+        <div class="dropdown_2columns">
+    
+            <div class="col_2">
+                <a href="#"><div class="img" id="prof_img"></div> Change Photo</a>             
+            </div>
+    
+        </div>
+	</div>
+</div>	

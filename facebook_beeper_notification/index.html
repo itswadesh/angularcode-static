@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Live Demo | How to create a facebook style activity notification plugin using jQuery and PHP</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script>
+jQuery(document).ready(function($){
+Beeper = $('#beeperContainer')
+Beeper.setBeeper()
+$('.notify').click(function(){
+Beeper.callBeeper('<div id="NotificationBox" class="UINotification"><div class="UINotification_Full"><div class="Notis"><div class="UINoti UINoti_Top UINoti_Bottom UINoti_Selected" style="opacity: 1; "><a class="UINoti_NonIntentional" href="#"><div class="UINoti_Icon"><i class="Notification_icon image2"></i></div><span class="Notification_x">&nbsp;</span><div class="UINoti_Title"><span class="NotiContent">Ipsita Sahoo</span> added a new photo to the album <span class="NotiContent">Chilling Out</span>.</div></a></div></div></div></div>');
+return false;
+});
+});
+(function($){
+$.fn.setBeeper = function( time ){
+var el = $(this)
+time = (time===undefined) ? 5000 : time;
+el  .data('hover',false)
+.data('time',time)
+.find('div')
+.live('mouseover',function(){
+el.data('hover',true)
+$(this).show()
+clearTimeout( $(this).data('timeout') )
+}).live('mouseout', function(){
+el.data('hover',false)
+var a = setTimeout(function(){
+$(this).animate({'opacity':'hide','height':'hide'},'fast',
+	function(){
+	el.find('div:hidden').remove()
+	})
+},el.data('time'))
+$(this).data('timeout',a)
+})
+el.find('span.Notification_x').live('click',function(e){
+$(e.target).parent().parent().parent().parent().remove()
+return false
+})
+return el
+}
+$.fn.callBeeper = function callBeeper(msg){
+var el = $(this)
+msg = (typeof msg != 'object') ? new Array(msg) : msg;
+$.each(msg,function(i,m){
+
+el.prepend('<div>'+m+'</div>')
+.find('div:first').css({'position':'relative','display':'none'})
+.animate({'opacity':'show','height':'show'},'slow')
+var a = setTimeout(function(){
+if(!el.data('hover'))
+el.find('div:first').animate({'opacity':'hide','height':'hide'},'fast',
+	function(){
+	el.find('div:hidden').remove()
+	})
+},el.data('time'))
+$(this).data('timeout',a)
+})
+return el
+}       
+})(jQuery);
+</script>
+</head>
+<body>
+<div style="background-color:#f2f2f2;">
+<a style="float:left;" href="http://www.2lessons.info"><img src="http://4.bp.blogspot.com/-5RL_78SJKQ8/UFn0JHtE55I/AAAAAAAAAOc/0KzdpV5TAJc/s1600/2lessons-logo.png"/></a>
+<a style="float:right;margin:20px 50px 0 0;" href="http://www.2lessons.info/2012/05/how-to-create-facebook-style-activity.html"><h2>Tutorial Link for facebook beeper - The activity notifier</h2></a>
+<div style="clear:both;">.</div>
+</div>
+<div align="center" >
+<h1>Live Demo | How to create a facebook type beeper activity notification plugin using jQuery and PHP</h1>
+<h4>In Facebook Whenever there is a update entry in the updates table, it triggers the alert notification plugin using jQuery. In our case we will trigger it manually. Click on Display Notification Button bellow.</h4>
+</div>
+<div align="center" class="main">
+	<a href="#" class="notify" id="notify">Display Notification</a>
+</div>
+<div id="beeperContainer"></div>
+
+</body>
+</html>

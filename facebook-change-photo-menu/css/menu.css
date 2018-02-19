@@ -1,0 +1,35 @@
+#nav_menu{
+	width:900px;
+	margin:0 auto;
+}
+.drop{
+width:200px;height:200px;background: #f22fff;display:box;cursor:pointer;float:left;
+}
+
+#nav_menu  #edit_image {
+	position:relative;
+	
+}
+
+#nav_menu #edit_image:hover {
+	background: #ffffff;
+}
+
+.dropdown_2columns
+ {
+	position:absolute;
+	display:none; /* Hides the drop down */
+	cursor:pointer;
+	background:#ffffff;
+}
+#nav_menu  #edit_image:hover .dropdown_2columns{ 
+	left:90px;
+	float:right;
+	display:inline;
+	top:5px;
+}
+.img{
+background:transparent url('../images/penciledit.gif') no-repeat scroll right top;
+height:18px;width:18px;
+float:left;
+}

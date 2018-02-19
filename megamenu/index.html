@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"></meta>
+    <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+    
+     <title> Online Shopping Mega Menu using AngularJS, PHP, MySQL </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/megamenu.css" rel="stylesheet">
+  </head>
+  <body ng-cloak="">
+<div class="navbar navbar-default megamenu">
+  <div class="container" ng-controller="NavCtrl">
+  <div class="col-sm-12">
+    <div class="navbar-header">
+      <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>  
+    </div>
+    <div id="navbar-collapse-grid" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li ng-repeat= "p in categories" class="dropdown megamenu-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">{{p.description}}<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li class="grid-demo">
+              <div class="row">
+                <div class="col-sm-3" ng-repeat="c in p.sub_categories"><a href="#/category/{{c.cat_id}}/{{c.description}}">{{c.description}}</a></div>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</div>
+<br/>
+<br/>
+<br/>
+Look at the mega menu at the top of the page
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+    <footer class="footer">
+      <div class="container">
+        <a href="http://www.angularcode.com/online-shopping-mega-menu-using-angularjs-php-mysql/" class="btn btn-primary">Back to Tutorial </a> <a href="https://www.dropbox.com/s/zwp8oploj3wa5qb/angularcode-megamenu.zip?dl=0" class="btn btn-info">Download Project Code</a>
+      </div>
+  </footer>
+  <script src="libs/angular.js"></script>
+  <script src="app/app.js"></script>
+  </body>
+</html>

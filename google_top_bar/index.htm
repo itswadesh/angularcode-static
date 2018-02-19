@@ -1,0 +1,154 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Google.com like fixed top bar menu example - demo.2lessons.com</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+<link href="google_top_menu.css" rel="stylesheet" type="text/css"/>
+<script>
+var SubMenutimer;
+var last_o;
+$(".mainbar").ready(function() {
+$(".staticMenu dt a").click(function() {
+$(this).parents(".staticMenu").find(".noti_bubble").hide();
+$(".staticMenu dd ul").not($(this).parents(".staticMenu").find("ul")).hide();
+$(".staticMenu dt a").not($(this)).removeClass("selected");
+$(this).parents(".staticMenu").find("ul").toggle();
+
+if($(this).parents(".staticMenu").find("ul").css("display") == "none"){
+	$(this).removeClass("selected");
+}else{
+	$(this).addClass("selected");
+}
+});
+
+$(".staticMenu dd ul li a").click(function() {
+var text = $(this).html();
+$(".staticMenu dt a span").html(text);
+$(".staticMenu dd ul").hide();
+});
+
+$(document).bind('click', function(e) {
+var $clicked = $(e.target);
+if (! $clicked.parents().hasClass("staticMenu")){
+	$(".staticMenu dd ul").hide();
+	$(".staticMenu dt a").removeClass("selected");
+}
+});
+});
+
+function openSubMenu(o){
+cancelSubMenuClose();
+if(last_o) $(last_o).parent().find("div").hide();
+last_o = o;
+$(o).parent().find("div").show();
+}
+
+function closeSubMenu(){
+SubMenutimer = setTimeout("close()",500);
+}
+
+function cancelSubMenuClose(){
+clearTimeout(SubMenutimer);
+}
+
+function close(){
+$(last_o).parent().find("div").hide();
+}
+</script>
+
+</head>
+<div style="clear:both; margin-top:20px;">&nbsp;</div>
+<div style="background-color:#f2f2f2;">
+<a style="float:left;" href="http://www.2lessons.info"><img src="http://4.bp.blogspot.com/-5RL_78SJKQ8/UFn0JHtE55I/AAAAAAAAAOc/0KzdpV5TAJc/s1600/2lessons-logo.png"/></a>
+<a style="float:right;margin:20px 50px; 0 0" href="http://www.2lessons.info/2012/09/how-to-create-google-like-top-bar-using.html"><h2>Tutorial Link for google.com like topn bar</h2></a>
+<div style="clear:both;">.</div>
+</div>
+<div id="header"><!-- begin header -->
+
+<div class="mainbar" >
+<div style="float:left;">
+<ul class="mainMenu" >
+<li class=""><!-- for links with no dropdown -->
+<a target="_blank" href="http://plus.google.com">+You</a>
+</li>
+<!-- Using class="current" for the link of the current page -->
+<li class="current">
+<a target="_blank" href="http://www.google.co.in/">Web</a>
+</li>
+<li class=""><!-- for links with no dropdown -->
+<a target="_blank" href="http://orkut.com">Orkut</a>
+</li>
+<li class=""><!-- for links with no dropdown -->
+<a target="_blank" href="http://gmail.com">Gmail</a>
+</li>
+<li class=""><!-- for links with no dropdown -->
+<a target="_blank" href="https://www.google.com/calendar">Calendar</a>
+</li>
+<li class=""><!-- for links with no dropdown -->
+<a target="_blank" href="https://docs.google.com">Documents</a>
+</li>
+<li class=""><!-- for links with no dropdown -->
+<a target="_blank" href="http://picasaweb.google.co.in/home">Photos</a>
+</li>
+<li><!-- Do not add any class for links with dropdown -->
+
+<!-- Drop Down menu Items -->
+			
+<li style="border-right:0;">
+	<dl class="staticMenu">
+	   <dt><a class="" href="settings" onClick="return false;">Account<span class="arrow"></span></a></dt>
+ <dd>
+<ul class="mainMenuSub" style="right: -1px; left: auto; display: none;">
+<li><a href="http://www.google.co.in/reader">Reader</a></li>
+<li><a href="https://sites.google.com">Sites</a></li>
+<li><a href="http://groups.google.co.in">Groups</a></li>
+<li><a href="http://www.youtube.com">YouTube</a></li>
+<li>
+<div class="mid-line">
+</div>
+</li>
+<li><a href="http://www.google.co.in/imghp?hl=en&tab=wi">Images</a></li>
+<li><a href="http://maps.google.co.in/maps?hl=en&tab=wl">Maps</a></li>
+<li><a href="http://translate.google.co.in/">Translate</a></li>
+<li><a href="http://books.google.co.in">Books</a></li>
+<li><a href="http://scholar.google.co.in/">Scholar</a></li>
+<li><a href="http://blogsearch.google.co.in">Blogs</a></li>
+<li>
+<div class="mid-line">
+</div>
+</li>
+<li><a href="http://www.google.co.in/intl/en/options/">even more >></a></li>
+<li>
+<div class="mid-line">
+</div>
+</li>
+</ul>
+ </dd>
+</dl>
+</li>
+</ul>             	
+</div>
+</div>
+<br/><br/>
+	<div align="center">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+<h2>Live Demo | Google.com like top bar with drop down menu using html css and jQuery @ <a href="http://www.2lessons.info">http://www.2lessons.info</a></h2>
+<h2>&nbsp;</h2>
+  <h2>The tutorial can be found here :- <a href="http://www.2lessons.info/2012/09/how-to-create-google-like-top-bar-using.html">http://www.2lessons.info</a></h2>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp; </p>
+<div style="background-color:#f2f2f2">
+<a href="http://www.2lessons.info"><img src="http://4.bp.blogspot.com/-5RL_78SJKQ8/UFn0JHtE55I/AAAAAAAAAOc/0KzdpV5TAJc/s1600/2lessons-logo.png"/></a>
+</div>
+</div>					
+
+</div><!-- end header -->	

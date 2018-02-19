@@ -1,0 +1,169 @@
+@charset "utf-8";
+body{
+/* body*/
+font-size: 11px;
+font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+color: #333;
+line-height: 1.28;
+text-align: left;
+direction: ltr;
+}
+.top{
+/* style for the div with notify button*/
+font-size:15px;
+background-color:#f2f2f2;
+margin:3px auto;
+height:80%;
+padding:15px;
+font-weight:normal;
+/*border-radius*/
+-webkit-border-radius:15px;
+   -moz-border-radius:15px;
+        border-radius:15px;
+
+border:1px solid #E5E5E5;
+/*box-shadow*/
+-webkit-box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px;
+   -moz-box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px;
+        box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px;
+}
+.main{
+/* style for the div with notify button*/
+font-size:15px;
+width:670px;
+margin:30px auto;
+height:80%;
+padding:15px;
+font-weight:normal;
+/*border-radius*/
+-webkit-border-radius:15px;
+   -moz-border-radius:15px;
+        border-radius:15px;
+background:white;
+border:1px solid #E5E5E5;
+/*box-shadow*/
+-webkit-box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px;
+   -moz-box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px;
+        box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px;
+}
+.notify{
+color:#666;
+width:150px;
+font:bold 75% arial,sans-serif;
+text-decoration:none;
+padding:10px 10px 10px 10px;
+display:inline-block;
+text-align:center;
+/*Background*/
+background:#f3f3f3;
+background:-webkit-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
+/*linear-gradient*/
+background:-webkit-gradient(linear,left top,left bottom,from(from(#F5F5F5)),to(to(#F1F1F1)));
+/*@@prefixmycss->No equivalent*/
+background:-webkit-linear-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
+background:   -moz-linear-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
+background:     -o-linear-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
+background:        linear-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
+border:solid 1px #dcdcdc;
+/*border-radius*/
+-webkit-border-radius:2px;
+   -moz-border-radius:2px;
+        border-radius:2px;
+margin:25px auto;
+}
+.notify:hover{
+color:#333;
+border-color:#999;
+/*box-shadow*/
+-webkit-box-shadow:0 2px 0 rgba(0,0,0,0.2) -webkit-box-shadow:0 2px 5px rgba(0,0,0,0.2);
+   -moz-box-shadow:   0 2px 0 rgba(0,0,0,0.2) -moz-box-shadow:0 2px 5px rgba(0,0,0,0.2);
+        box-shadow:        0 2px 0 rgba(0,0,0,0.2) box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+.image2{
+/* icon within the Notification */
+background-image:url(images/like.png);
+background-repeat:no-repeat;
+display:inline-block;
+height:16px;
+width:16px;
+}
+.UINotification{
+width:230px;
+left:15px;
+bottom:30px;
+z-index:99;
+}
+.UINoti{
+background:#E1E6EE;
+border-bottom:1px solid #BFCADE;
+overflow:hidden;
+padding:3px 0;
+clear:right;
+}
+.UINotification .UINotification_Full{
+background-color:#E1E6EE;
+border:1px solid #99A8C7;
+/*border-radius*/
+-webkit-border-radius:3px;
+   -moz-border-radius:3px;
+        border-radius:3px;
+margin:0;
+padding:3px;
+}
+.UINotification .UINotification_Full:hover{
+/* change background color on mouseover */
+background-color:#CAD1DE;
+}
+.UINotification .UINoti_Bottom{
+border-bottom:none;
+}
+.UINotification .UINoti_Selected{
+background:#CAD1DE;
+}
+.UINotification .UINoti_Top{
+padding-top:0;
+}
+.UINotification .UINoti_Bottom{
+padding-bottom:0;
+}
+
+a, a:hover{
+cursor:pointer;
+color:#3B5998;
+text-decoration:none;
+}
+.UINoti .UINoti_NonIntentional .UINoti_Icon{
+float:left;
+width:20px;
+height:20px;
+text-align:center;
+margin:5px 5px;
+}
+.UINoti_Selected .UINoti_Icon{
+margin-right:2px;
+}
+
+.UINotification .UINoti .UINoti_NonIntentional .Notification_x{
+/* close button */
+float:right;
+height:16px;
+width:16px;
+margin-top:6px;
+background:url(images/close.gif) no-repeat;
+/*visibility:hidden;*/
+}
+.UINoti .Notification_x:hover{
+/* close button on mouseover */
+background:url(images/closehover.gif) no-repeat !important;
+}
+.UINoti_Selected .Notification_x{
+display:block !important;
+visibility:visible !important;
+margin-left:4px;
+}
+.UINoti .UINoti_NonIntentional .UINoti_Title{
+margin:0 20px 0 30px;
+}
+.UINoti .UINoti_Title{
+padding:5px 0;
+}

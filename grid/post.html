@@ -1,0 +1,77 @@
+<p>This tutorial explains how to create a datagrid similar to ASP.NET gridview with client side paging, searching and sorting functionality using AngularJS, PHP, MySQL. Following are links to the demo and download of the final application.
+</p>
+<p>I have used angular-ui directive for the user interface of paging and some basic functionality.
+</p>
+<p>While working with angularjs I found out the biggest issue using angular is it makes the Browser DOM slow while displaying huge amount of data. Hence it becomes necessary to load data partially through paging or infinite scrolling.
+</p>
+<p>When we implement paging the data is divided into number of small pages. Hence the browser has to load less amount of data at one stretch. Which in turn increases the data loading speed.
+</p>
+<p>I've structured the entire application into 5 different folders
+</p>
+<h3>/includes/db.php</h3> <p>- Contains database configuration settings</p>
+<h3>/ajax/getCustomers.php</h3> <p>- Contains php files which needs server side communication</p>
+<ul>
+	<li>Connect to MySQL database </li>
+	<li>Retrieve all the customers and convert into JSON format</li> 
+</ul>
+<code>
+	<?php
+	include('../includes/db.php');
+	$query=mysql_query("select distinct c.id, c.name, c.address, c.city, c.phone from customers c order by id") or die(mysql_error());
+
+	# Collect the results
+	while($obj = mysql_fetch_object($query)) {
+	    $arr[] = $obj;
+	}
+
+	# JSON-encode the response
+	$json_response = json_encode($arr);
+
+	// # Return the response
+	echo $json_response;
+	?>
+</code>
+<h3>/app/app.js</h3> <p>- AngularJs application codes</p>
+<ul>
+	<li>Get all the customers returned by the ajax/getCustomers.php and store it in our applications scope</li>
+	<li>Implement paging, sorting and filter functionalities</li>
+</ul>
+<code>
+	var app = angular.module('myApp', ['ui.bootstrap']);
+
+	app.filter('startFrom', function() {
+	    return function(input, start) {
+	        if(input) {
+	            start = +start; //parse to int
+	            return input.slice(start);
+	        }
+	        return [];
+	    }
+	});
+	app.controller('customersCrtl', function ($scope, $http, $timeout) {
+	    $http.get('ajax/getCustomers.php').success(function(data){
+	        $scope.list = data;
+	        $scope.currentPage = 1; //current page
+	        $scope.entryLimit = 5; //max no of items to display in a page
+	        $scope.filteredItems = $scope.list.length; //Initially for no filter  
+	        $scope.totalItems = $scope.list.length;
+	    });
+	    $scope.setPage = function(pageNo) {
+	        $scope.currentPage = pageNo;
+	    };
+	    $scope.filter = function() {
+	        $timeout(function() { 
+	            $scope.filteredItems = $scope.filtered.length;
+	        }, 10);
+	    };
+	    $scope.sort_by = function(predicate) {
+	        $scope.predicate = predicate;
+	        $scope.reverse = !$scope.reverse;
+	    };
+	});
+</code>
+<h3>/css/bootstrap.css</h3> <p>- Adds bootstrap styles to our application</p>
+
+<h3>/js</h3> <p>- Contains supporting javascript library files [angular.min.js, ui-bootstrap-tpls-0.10.0.min.js]</p>
+
+I hope the above tutorial will get you started handling large MySQL data tables using AngularJS and PHP. If you have any improvement ideas or suggestions please add comments bellow.

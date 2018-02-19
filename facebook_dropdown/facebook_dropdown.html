@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Facebook Style drop down menu using jquery and css</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	
+	// This hides the menu when the page is clicked anywhere other than the menu.
+		$(document).bind('click', function(e) {
+			var $clicked = $(e.target);
+		    if (! $clicked.parents().hasClass("menu")){
+		        $(".menu dd ul").hide();
+				$(".menu dt a").removeClass("selected");
+			}
+
+		});
+		
+		$(".menu dt a").click(function() {
+
+			var clickedId = "#" + this.id.replace(/^link/,"ul");
+
+		        // Hides everything else that the current menu 
+			$(".menu dd ul").not(clickedId).hide();
+
+		        //Toggles the menu.
+			$(clickedId).toggle();
+
+		        //Add the selected class.
+			if($(clickedId).css("display") == "none"){
+				$(this).removeClass("selected");
+			}else{
+				$(this).addClass("selected");
+			}
+
+		});
+		
+// This function shows which menu item was selected in corresponding result place
+		$(".menu dd ul li a").click(function() {
+			var text = $(this).html();
+			$(this).closest('dl').find('.result').html(text);
+		    $(".menu dd ul").hide();
+		});
+
+		
+	});
+</script>
+<style type="text/css">
+
+	.menu dl{ margin-left:5px; }
+	.menu dd, .menu dt, .menu ul 
+	{ margin:0px; padding:0px; }
+	.menu dd { position:relative; }
+
+	
+	.menu dt a {background:#EEEEEE 
+	url(privacyOff.png) no-repeat scroll right center;
+		display:block; width:40px; height:22px; cursor:pointer;}
+
+	.menu dt a.selected{
+		background:#EEEEEE url(privacyOn.png) 
+		no-repeat scroll right center;
+	}
+	.menu dt a span {
+	cursor:pointer; display:block; padding:5px;}
+
+	.menu dd ul { 
+	background:#EEEEEE none repeat scroll 0 0; display:none;
+		list-style:none; padding:3px 0; position:absolute;
+		left:0px; width:160px; left:auto; right:0; 
+		border:1px solid #656565; cursor:pointer;
+		}
+	.menu dd ul li{ 
+	background-color:#EEEEEE; margin:0; width:160px;
+	}
+	.menu span.value { display:none;}
+	.menu dd ul li a { 
+	display:block; font-weight:normal; width:137px; 
+	text-align:left; overflow:hidden; padding:2px 4px 3px 19px; 
+	color:#111111; text-decoration:none;
+	}
+	.menu dd ul li a:hover{ 
+	background:#656565; color:white; text-decoration:none; 
+	}
+	.menu dd ul li a:visited{ 
+	text-decoration:none; 
+	}
+</style>
+
+</head>
+
+<body>
+<div style="background-color:#f2f2f2;">
+<a style="float:left;" href="http://www.2lessons.info"><img src="http://4.bp.blogspot.com/-5RL_78SJKQ8/UFn0JHtE55I/AAAAAAAAAOc/0KzdpV5TAJc/s1600/2lessons-logo.png"/></a>
+<a style="float:right;" href="http://www.2lessons.info/2011/08/facebook-style-drop-down-menu-using.html"><h3>Tutorial Link</h3></a>
+<div style="clear:both;">.</div>
+</div>
+	<div style="width:500px; margin:auto;">
+		<h1 style="margin:20px 0;">Facebook menu Menus</h1>
+
+		<div style="height:300px;">
+			<div style="width:162px;">
+			    <dl style="" class="menu">
+			       <dt>
+				   <a class="" id="linkglobal" 
+				   style="cursor: pointer;"></a><span class="result"></span></dt>
+					<dd>
+			            <ul style="display: none;" id="ulglobal">
+			                <li><a href="#">Everyone</a></li>
+			                <li><a href="#">Friends</a></li>
+			                <li><a href="#">Only Me</a></li>
+			                <li><a href="#">Customize</a></li>
+			          </ul>
+			       </dd>
+			    </dl>
+			</div>
+		</div>
+
+		<div style="width:162px;">
+		    <dl style="" class="menu">
+		       <dt><a class="" id="linkg" style="cursor: pointer;"></a><span class="result"></span></dt>
+				<dd>
+		            <ul style="display: none;" id="ulg">
+		                <li><a href="#">Everyone</a></li>
+		                <li><a href="#">Friends</a></li>
+		                <li><a href="#">Only Me</a></li>
+		                <li><a href="#">Customize</a></li>
+		          </ul>
+		       </dd>
+		    </dl>
+		</div>
+	</div>
+
+</body></html>

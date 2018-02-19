@@ -1,0 +1,30 @@
+<title>Facebook style alert confirm box using jquery and css - demo @ www.2lessons.info</title>
+<link href="facebook_alert_confirm.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="jquery_facebook.alert.js"></script>
+<script type="text/javascript">
+$(document).ready( function() {
+	$(".closeButton").click( function() 
+	{
+		jConfirm('Are you sure you want ot delete this post?', 'Confirmation Dialog', 
+		function(r) {
+		if(r==true)
+		{
+			$("#divDelete").fadeOut('slow');
+		}
+		});
+	});
+});
+</script>
+
+<div class="container">
+<div style="background-color:#f2f2f2;">
+<a style="float:left;" href="http://www.2lessons.info"><img src="http://4.bp.blogspot.com/-5RL_78SJKQ8/UFn0JHtE55I/AAAAAAAAAOc/0KzdpV5TAJc/s1600/2lessons-logo.png"/></a>
+<a style="float:right;margin:20px 50px 0 0;" href="http://www.2lessons.info/2012/09/facebook-style-alert-confirm-box-using.html"><h2>Tutorial Link for facebook type alert confirm box</h2></a>
+<div style="clear:both;">.</div>
+</div>
+<div align="center" id="divDelete">
+Click on the close button to delete this post
+	<a href="#" class="closeButton" id="deleteConfirm"></a>
+</div>
+</div>

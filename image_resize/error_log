@@ -1,0 +1,37 @@
+[28-Sep-2012 17:39:32] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: '/tmp/phpRDiZNM' is not a valid JPEG file in /home/u620067090/public_html/demos/image_resize/processupload.php on line 46
+[28-Sep-2012 17:39:32] PHP Warning:  Division by zero in /home/u620067090/public_html/demos/image_resize/processupload.php on line 82
+[28-Sep-2012 17:39:32] PHP Warning:  Division by zero in /home/u620067090/public_html/demos/image_resize/processupload.php on line 82
+[28-Sep-2012 17:39:32] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home/u620067090/public_html/demos/image_resize/processupload.php on line 85
+[28-Sep-2012 17:39:32] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home/u620067090/public_html/demos/image_resize/processupload.php on line 87
+[28-Sep-2012 17:39:32] PHP Warning:  Division by zero in /home/u620067090/public_html/demos/image_resize/processupload.php on line 82
+[28-Sep-2012 17:39:32] PHP Warning:  Division by zero in /home/u620067090/public_html/demos/image_resize/processupload.php on line 82
+[28-Sep-2012 17:39:32] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home/u620067090/public_html/demos/image_resize/processupload.php on line 85
+[28-Sep-2012 17:39:32] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home/u620067090/public_html/demos/image_resize/processupload.php on line 87
+[28-Sep-2012 17:39:32] PHP Warning:  Division by zero in /home/u620067090/public_html/demos/image_resize/processupload.php on line 82
+[28-Sep-2012 17:39:32] PHP Warning:  Division by zero in /home/u620067090/public_html/demos/image_resize/processupload.php on line 82
+[28-Sep-2012 17:39:32] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home/u620067090/public_html/demos/image_resize/processupload.php on line 85
+[28-Sep-2012 17:39:32] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home/u620067090/public_html/demos/image_resize/processupload.php on line 87
+[28-Sep-2012 17:39:32] PHP Warning:  Division by zero in /home/u620067090/public_html/demos/image_resize/processupload.php on line 82
+[28-Sep-2012 17:39:32] PHP Warning:  Division by zero in /home/u620067090/public_html/demos/image_resize/processupload.php on line 82
+[28-Sep-2012 17:39:32] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home/u620067090/public_html/demos/image_resize/processupload.php on line 85
+[28-Sep-2012 17:39:32] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home/u620067090/public_html/demos/image_resize/processupload.php on line 87
+[12-Nov-2012 05:03:30] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/u620067090/public_html/demos/includes/db.php on line 7
+[27-Nov-2012 06:49:03] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to MySQL server on 'mysql.x90x.net' (4) in /home/u620067090/public_html/demos/includes/db.php on line 7
+[06-Dec-2012 14:13:15] PHP Warning:  imagecreatefromgif() [<a href='function.imagecreatefromgif'>function.imagecreatefromgif</a>]: '/tmp/phpogqp5Z' is not a valid GIF file in /home/u620067090/public_html/demos/image_resize/processupload.php on line 43
+[06-Dec-2012 14:13:15] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home/u620067090/public_html/demos/image_resize/processupload.php on line 87
+[06-Dec-2012 14:13:15] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home/u620067090/public_html/demos/image_resize/processupload.php on line 87
+[06-Dec-2012 14:13:15] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home/u620067090/public_html/demos/image_resize/processupload.php on line 87
+[06-Dec-2012 14:13:15] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home/u620067090/public_html/demos/image_resize/processupload.php on line 87
+[27-Dec-2012 10:53:25] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: '/tmp/phprzHGmV' is not a valid JPEG file in /home/u620067090/public_html/demos/image_resize/processupload.php on line 46
+[27-Dec-2012 10:53:25] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home/u620067090/public_html/demos/image_resize/processupload.php on line 87
+[27-Dec-2012 10:53:25] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home/u620067090/public_html/demos/image_resize/processupload.php on line 87
+[27-Dec-2012 10:53:25] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home/u620067090/public_html/demos/image_resize/processupload.php on line 87
+[27-Dec-2012 10:53:25] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home/u620067090/public_html/demos/image_resize/processupload.php on line 87
+[03-Aug-2014 03:11:08 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 27000 bytes) in /home/itswadesh/public_html/demos/image_resize/processupload.php on line 46
+[03-Aug-2014 03:12:13 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 8000 bytes) in /home/itswadesh/public_html/demos/image_resize/processupload.php on line 46
+[22-Sep-2014 08:47:10 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 3107 bytes) in /home/itswadesh/public_html/demos/image_resize/processupload.php on line 85
+[30-Oct-2014 11:47:29 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 6764 bytes) in /home/itswadesh/public_html/demos/image_resize/processupload.php on line 85
+[13-Nov-2014 19:04:02 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 18432 bytes) in /home/itswadesh/public_html/demos/image_resize/processupload.php on line 46
+[29-Nov-2014 22:45:28 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 19584 bytes) in /home/itswadesh/public_html/demos/image_resize/processupload.php on line 46
+[19-Dec-2014 15:27:10 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 16512 bytes) in /home/itswadesh/public_html/demos/image_resize/processupload.php on line 85
+[13-May-2015 12:16:30 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 18048 bytes) in /home/itswadesh/public_html/demos/image_resize/processupload.php on line 46

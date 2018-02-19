@@ -1,0 +1,4 @@
+[28-Sep-2012 08:56:54] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/u620067090/public_html/demos/includes/db.php on line 7
+[12-Nov-2012 02:35:56] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/u620067090/public_html/demos/includes/db.php on line 7
+[27-Nov-2012 06:49:03] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/u620067090/public_html/demos/includes/db.php on line 7
+[27-Nov-2012 23:58:11] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to MySQL server on 'mysql3.000webhost.com' (4) in /home/u620067090/public_html/demos/ajaxpaging/db.php on line 7

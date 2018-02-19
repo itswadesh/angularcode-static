@@ -1,0 +1,96 @@
+﻿	@charset "utf-8";
+	/* CSS Document */
+	*{
+		margin:0;
+		padding:0;
+	}
+
+tr
+{
+clear:both;
+}
+td
+{
+vertical-align:top;
+}
+#leftcolumn
+{
+
+border-right:1px solid #e2e2e2;
+	
+}
+#centercolumn
+{
+
+margin:0px 15px 0px 15px;
+}
+
+li
+{list-style:none;
+}
+.spacer
+{
+clear: top;
+}
+a
+{
+	text-decoration:none;
+}
+
+	
+	div.mainbar{
+		top:0;
+		z-index: 999;
+		padding:0;
+		position:fixed;
+		width:100%;
+		background:black;
+		height:50px;
+	}
+
+.navHeader{color: #999;font-size: 9px;font-weight: bold;margin-top: 12px;font-family: "lucida grande",tahoma,verdana,arial,sans-serif; line-height: 1.1;text-align: left;direction: ltr;}
+
+.leftsiteappslist img {width:16px;height:16px}
+.leftsiteappslist{margin:6px 0 0 0}
+.leftsiteappslist a{display:block;padding:5px;color:#333}
+.leftsiteappslist .selected{ background-color: #fff;font-weight:bold;border-bottom:2px solid #3299c4;	}
+.leftsiteappslist a:hover{ background-color: #f9f9f9; text-decoration:none; }
+.iconu{vertical-align: top;margin-right:5px;border:0} 
+
+
+#page{width:98%;margin: 15px auto 50px auto;background-color:#fff;padding:5px;padding-bottom:0;border: 2px solid #d5d5d5; -webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;}
+img{border:none}
+html{overflow-y:scroll;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;background-color:#e8e8e8;color:#808080;}
+body{font-size: 11px;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;color:#333;line-height:1.28;margin:0;padding:0;text-align:left;direction:ltr;unicode-bidi:embed}
+h1,h2,h3,h4,h5,h6{color:#333;margin:0;padding:0}
+h1{font-size: 16px}
+h4,h5{font-size: 11px}
+p{margin:1em 0}
+.header_underline1{background-color:#3299c4; height:3px; line-height:3px; clear:both; font-size:3px;}
+.header_underline2{background-color:#707070; height:1px; line-height:1px; clear:both; font-size:0px;}
+.header_underline3{background-color:#cfcfcf; height:1px; line-height:1px; clear:both; font-size:0px;}
+.updatetextbox
+{
+    background:#cccccc;
+}
+
+.myname { font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+           color:Black;
+           font-weight:bold;
+          font-size:x-large;
+        }
+.mydesc a:hover
+{
+    color:Aqua;
+}
+
+
+
+#header {
+	background:#F1F1F1;
+	padding:3px;
+	margin:0;
+	text-align:left;
+	color:#FFF;
+	z-index:-1;
+	}

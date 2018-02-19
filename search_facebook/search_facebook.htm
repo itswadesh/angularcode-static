@@ -1,0 +1,90 @@
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+<link href="search_style.css" rel="stylesheet" type="text/css"/>
+<title>Facebook type search using jquery and push ajax</title>
+<script>
+$(function() {
+//alert('cache1[1].container.html');
+//$("#search_result").load("search_extra.php?txt=''");
+search_more("");
+var cache1 = [];
+var cr = [];
+push_into();
+//for(i=0;i<cache1.length;i++)
+//alert(cache1[i].name);
+//alert('load data into DOM');
+function push_into()
+{
+
+    //$('#search_result').style.display = "none";
+  // Cache element, name and container
+  $(".name").each(function() {
+    var elt = $(this);//alert(elt.find(".nm > b").html());
+    cache1.push({element: elt.find(".nm > b").html(), name: elt.html(), container: elt.parents("li")[0]});
+  });
+}
+
+$("#ipi").keyup(function() {
+
+cache_result=search_cache(this.value);
+
+      if(cache_result<7)
+	  {
+		search_more('txt='+this.value);
+		push_into();
+		search_cache(this.value);
+	  }
+	  
+	  });
+function search_cache(ip)
+{//alert('s');
+$("#sr").html('');
+var regexp = new RegExp(ip, "i");
+    nbSelected = 0,count=0;
+    for (var i = 0, length = cache1.length; i < length; i++) {
+      var item = cache1[i];
+      text = item.element.match(regexp);
+	  //alert(item.name);
+	  if(text!=null )
+	  {count+=1;
+	  
+	  $("#sr").append(item.name);
+	  
+	  }
+	  if(count>6)
+	  break;
+	  }
+var dataString = 'txt='+ip;//+'res='+nbSelected;
+return count;
+//load_data(dataString);
+
+}
+
+function search_more(dataString)
+{
+//alert('x');
+//$("#sr").append("Loading...");
+$.ajax({
+type: "POST",
+url: "search_extra.php",
+async:false,
+data: dataString,
+cache: false,
+success: function(html)
+{//alert('d');
+//alert(dataString);
+$("#search_result").html(html);
+//alert(search_cache(dataString));
+}
+});
+}
+});
+</script>
+<body>
+<input type="text" id="ipi"></input>
+<div id="search_result" style="display:none;">
+
+</div>
+<div id="sr">
+
+</div>
+</body>

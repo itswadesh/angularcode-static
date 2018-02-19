@@ -1,0 +1,15 @@
+<div>
+<script type="text/ng-template" id="customTemplate.html">
+  <a>
+      <span bind-html-unsafe="match.label | typeaheadHighlight:query"></span>
+      <i>({{match.model.capital}})</i>
+  </a>
+</script>
+<blockquote><h1><a href="http://angularcode.com/how-to-create-a-facebook-style-autocomplete-using-angularjs/">Facebook type search autocomplete / typeahead using AngularJS+PHP+MySQL</a></h1></blockquote>
+<form class="form-search" ng-controller="autocompleteController">
+    Selected Country: {{selectedCountries}}
+        <br><br>
+        <input type="text" ng-model="selectedCountries" placeholder="Search Countries" typeahead="c as c.country for c in countries | filter:$viewValue | limitTo:10" typeahead-min-length='1' typeahead-on-select='onSelectPart($item, $model, $label)' typeahead-template-url="customTemplate.html" class="form-control" style="width:350px;">
+        <i class="icon-search nav-search-icon"></i>
+</form>
+</div>

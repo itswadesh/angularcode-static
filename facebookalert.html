@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Facebook style alert box</title>
+
+<link href="facebookalert_files/facebook.alert.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/
+libs/jquery/1.3.0/jquery.min.js"></script>
+<script type="text/javascript" src="facebookalert_files/jquery_facebook.alert.js"></script>
+	<script type="text/javascript">
+			
+			$(document).ready( function() {
+				
+			
+			
+			$("#delete_confirm").click( function() 
+			{
+			
+					jConfirm('Are you sure you want ot delete this thread?', 'Confirmation Dialog', 
+				
+				    function(r) {
+					
+					
+					if(r==true)
+					{
+					    $("#box").fadeOut(300);
+					}
+						
+						
+						
+					});
+				});
+
+				
+				
+				
+				
+				
+				
+				
+			});
+			
+		</script>
+</head>
+
+<body>
+<div><h1><a href="http://itswadesh.wordpress.com">itswadesh.wordpress.com</a></h1></div>
+
+		
+		
+		<div id="box" style=" background-color:#dedede; border:1px solid #333; height:90px; width:200px">
+		Click Delete link
+		<div style="float:right; width:60px; height:20px"><a href="#" id="delete_confirm" title="Delete">Delete</a></div>
+		</div>
+		
+
+
+				
+				
+				
+		
+		
+		
+</body>
+</html>

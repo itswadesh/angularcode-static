@@ -1,0 +1,72 @@
+#divDelete{
+/* style for the div with notify button*/
+font-size:15px;
+width:670px;
+margin:30px auto;
+height:30px;
+padding:15px;
+font-weight:normal;
+background-color:#e2e2e2;
+border-bottom:2px solid #d73b96;
+}
+.deleteConfirm{
+color:#666;
+width:150px;
+font:bold 75% arial,sans-serif;
+text-decoration:none;
+padding:10px 10px 10px 10px;
+display:inline-block;
+text-align:center;
+border:solid 1px #dcdcdc;
+margin:25px auto;
+}
+.deleteConfirm:hover{
+color:#333;
+border-color:#999;
+}
+.closeButton{
+/* close button */
+float:right;
+height:16px;
+width:16px;
+margin-top:6px;
+background:url(images/close.gif) no-repeat;
+}
+.closeButton:hover{
+background:url(images/closehover.gif) no-repeat !important;
+}
+#popup_container {
+font-family:'Lucida Grande',arial;
+font-weight:bold;
+text-align:left;
+font-size: 12px;
+width: 364px; 
+height: 86px; 
+background: #F3F3F3;
+border:solid 1px #dedede;
+border-bottom: solid 2px #d73b96;
+color: #000;
+}
+
+#popup_title {
+display:none;
+}
+
+#popup_message {
+padding-top: 15px;
+padding-left: 15px;
+}
+
+#popup_panel {
+text-align: left;
+padding-left:15px;
+}
+input
+{
+background-color:#d73b96;
+padding:3px;
+color:#FFFFFF;
+margin-top:20px;
+margin-right:10px;
+}
+

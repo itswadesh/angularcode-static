@@ -1,0 +1,28 @@
+<!--  
+	fSearch 2.0 - jQuery plugin for facebook type search suggestions
+	http://www.codenx.com/
+	Copyright (c) 2013 CodenX 
+-->
+<html>
+<head>
+<title>Facebook type search suggestions using jQuery, PHP and JSON</title>
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/fsearch.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>fSearch - Facebook type search suggestions using jQuery and PHP</h1>
+<p>Start typing in the search box bellow</p>
+
+<input id="searchInput" placeholder="Search for people, places and things"/>
+
+</div>
+</body>
+<script>
+$(document).ready(function()
+{
+  $('#searchInput').fsearch();
+});
+</script>
+</html>

@@ -1,0 +1,2 @@
+[25-Sep-2014 14:08:02 UTC] PHP Fatal error:  Call to a member function get() on a non-object in /home/itswadesh/public_html/demos/angularcode-authentication-app/api/v1/authentication.php on line 2
+[18-Apr-2015 00:04:19 UTC] PHP Fatal error:  Call to a member function get() on a non-object in /home/itswadesh/public_html/demos/angularcode-authentication-app/api/v1/authentication.php on line 2

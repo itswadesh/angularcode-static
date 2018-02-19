@@ -1,0 +1,53 @@
+<html ng-app="myApp">
+    <head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700" rel="stylesheet" type="text/css">
+    <title>Convert Text to URL</title>
+    </head>
+    <body>
+    
+    <div class="navbar navbar-default" id="navbar">
+    <div class="container" id="navbar-container">
+	<div class="navbar-header">
+		<a href="http://angularcode.com" class="navbar-brand">
+			<small>
+				<i class="glyphicon glyphicon glyphicon-log-out"></i>
+				AngularCode / AngularJS Demos 
+			</small>
+		</a><!-- /.brand -->
+		
+	</div><!-- /.navbar-header -->
+	<div class="navbar-header pull-right" role="navigation">
+        <a href="http://angularcode.com/a-simple-angularjs-web-app-that-converts-text-to-url-format/" class="btn btn-sm btn-danger nav-button-margin"> <i class="glyphicon glyphicon-book"></i>&nbsp;Tutorial Link</a>
+        <a href="http://angularcode.com/download-link/?url=https://app.box.com/s/zrgdl08ja4wnj0k2ssu0" class="btn btn-sm btn-warning nav-button-margin"> <i class="glyphicon glyphicon-download"></i>&nbsp;Download Project</a>
+	</div>
+	</div>
+	</div>
+	<div class="row">
+    	<div class="container">
+    		<div class="col-sm-9">
+    			<div>
+                <blockquote><h1><a href="http://angularcode.com/a-simple-angularjs-web-app-that-converts-text-to-url-format/">Convert Text to URL format using AngularJS Filter</a></h1></blockquote>
+                <span class="col-md-2">Input Text: </span><input type="text" ng-model="inputString" class="col-md-9 search"/>
+                <span class="col-md-2">Output URL:</span><span class="col-md-9" style="color:green"> {{inputString | clean}}</span> 
+                </div>
+    		</div>
+    	</div>
+    </div>
+    	
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+<script>
+angular.module('myApp',[])
+.filter('clean', function(){
+return function (input){
+  if(input){
+  return input.toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/ig,'');
+         }
+       }
+});
+</script>
+    </body>
+</html>

@@ -1,0 +1,2 @@
+[18-Sep-2012 12:03:47] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Lost connection to MySQL server at 'reading initial communication packet', system error: 113 in /home/u620067090/public_html/demos/includes/db.php on line 7
+[18-Sep-2012 12:03:58] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Lost connection to MySQL server at 'reading initial communication packet', system error: 113 in /home/u620067090/public_html/demos/includes/db.php on line 7

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Micro Menu using pure CSS</title>
+<style>
+body
+{
+margin:100px;
+}
+.dropdown  ul span
+{
+	text-align:center;
+	padding:5px 15px;
+}
+div.dropdown {
+color: #555;
+margin: 3px -22px 0 0;
+width: 143px;
+position: relative;
+height: 17px;
+text-align:left;
+
+z-index: 11010;
+}
+div.submenu ul
+{
+background: #e2e2e2;
+position: absolute;
+top: -12px;
+left: -20px;
+z-index: 11009;
+width: 135px;
+display: none;
+margin-left: 10px;
+padding: 40px 0 5px;
+border-radius: 6px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+div.dropdown:hover ul {
+    display: block;
+    position: absolute;
+}
+.dropdown  li a {
+   
+    color: #555555;
+    display: block;
+    font-family: arial;
+    font-weight: bold;
+    padding: 6px 15px;
+  cursor: pointer;
+text-decoration:none;
+
+}
+
+.dropdown li a:hover{
+    background:#155FB0;
+    color: #FFFFFF;
+    text-decoration: none;
+    
+}
+a.account {
+font-size: 11px;
+line-height: 17px;
+position: absolute;
+z-index: 11010;
+display: block;
+width: 95px;
+margin: -4px 5px 0 5px;
+padding:3px 0px 3px 8px;
+text-decoration: none;
+cursor:pointer;
+-moz-border-radius:6px;-webkit-border-radius:6px;
+border:1px solid #77D7F7;
+		background-color:#00B4F0;
+		color:#FFFFFF;
+		font-weight:bold;
+}
+.root
+{
+list-style:none;
+margin:0px;
+padding:0px;
+font-size: 11px;
+padding: 11px 0 0 0px;
+border-top:1px solid #dedede;
+	
+	
+}
+</style>
+<body>
+<div style="background-color:#f2f2f2">
+<a href="http://itswadesh.wordpress.com"><img src="http://2.bp.blogspot.com/-QO2CN3vpoQU/T0CdIPrmrrI/AAAAAAAAAAw/Biu232M63rw/s1600/bloglogo.png"/></a>
+</div>
+	<div style="width:500px; margin:auto;">
+		<h1 style="margin:20px 0;">Simple css drop down menu created using only CSS</h1>
+		
+<div class="dropdown">
+	<a class="account" >
+	<span>My Account</span>
+	</a>
+	<div class="submenu" >
+
+	  <ul class="root">
+		
+		<li><a href="/answer/profile.php#myquestions.php">Dash Board</a></li>
+		<li><a href="/answer/cp.php">Change Password</a></li>
+		<li><a href="/answer/logout.php">Logout</a> </li>
+		  
+	  </ul>
+	</div>
+	</div>
+	
+</div>
+</body>
+</html>

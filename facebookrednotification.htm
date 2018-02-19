@@ -1,0 +1,43 @@
+<title>Facebook type red notification counter using simple css</title>
+<style>
+.pageContainer{
+	width:900px;
+	margin:100px auto;
+}
+.noti_Container {
+    position:relative;
+    border:1px solid blue; /* This is just to show you where the container ends */
+    width:16px;
+    height:16px;
+	cursor: pointer;
+}
+.noti_bubble {
+    position:absolute;
+    top: -8px;
+    right:-6px;
+    padding-right:2px;
+    background-color:red;
+    color:white;
+    font-weight:bold;
+    font-size:0.80em;
+    
+    border-radius:2px;
+    box-shadow:1px 1px 1px gray;
+}
+</style>
+<script>
+function f1()
+{
+document.getElementById("n1").style.visibility='hidden';
+}
+</script>
+<div style="background-color:#f2f2f2">
+<a href="http://www.2lessons.info"><img src="http://4.bp.blogspot.com/-5RL_78SJKQ8/UFn0JHtE55I/AAAAAAAAAOc/0KzdpV5TAJc/s1600/2lessons-logo.png"/></a>
+</div>
+<div class="pageContainer">
+<h1>Facebook type red notification counter using simple css</h1>
+<div class="noti_Container" onclick="return f1();">
+<img src="friends.png" style="border:none;"/>
+<div class="noti_bubble" id="n1">2</div>
+</div>
+</div>

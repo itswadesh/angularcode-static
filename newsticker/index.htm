@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>A nice vertical scrolling news ticker plugin using jQuery</title>
+<style type="text/css" media="all">
+body,html
+{
+	padding: 0;
+	margin: 0;
+}
+
+body
+{
+	background: #cccccc;
+}
+#newsticker-container a{color: #D83B97;text-decoration: none;}
+#newsticker-container
+{
+	width: 400px; 
+	margin: auto;
+	margin-top: 30px;
+	border: 5px solid #eeeeee;
+}
+
+#newsticker-container ul li div
+{
+	border-top: 1px solid #e2e2e2;
+	background: #ffffff;
+	padding: 10px 5px;
+}
+</style>
+
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/newsticker.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#newsticker-container').newsTicker();
+});
+</script>
+
+</head> 
+<body>
+<div style="background-color:#f2f2f2;">
+<a style="float:left;" href="http://www.2lessons.info"><img src="http://4.bp.blogspot.com/-5RL_78SJKQ8/UFn0JHtE55I/AAAAAAAAAOc/0KzdpV5TAJc/s1600/2lessons-logo.png"/></a>
+<a style="float:right;" href="http://www.2lessons.info/2012/11/how-to-create-simple-news-ticker-using-jquery.html"><h3>Tutorial Link for facebook type vertical news ticker jQuery Plugin</h3></a>
+<div style="clear:both;">.</div>
+</div>
+<div id="newsticker-container">
+	<ul>
+		<li>
+			<div>
+				1) <a href="http://www.2lessons.info/2012/03/facebook-type-vertical-navigation-menu.html">Facebook type vertical navigation menu created using jQuery</a>
+			</div>
+		</li> 
+		<li>
+			<div>
+
+				2) <a href="http://www.2lessons.info/2012/05/how-to-create-facebook-style-activity.html">facebook style activity notification</a>
+			</div>
+		</li> 
+		<li>
+			<div>
+				3) <a href="http://www.2lessons.info/2011/08/facebook-style-drop-down-menu-using.html">CSS jQuery Drop Down Menus</a>
+			</div>
+		</li>   
+		<li>
+			<div>
+				4) <a href="http://www.2lessons.info/2012/09/facebook-style-alert-confirm-box-using.html">Facebook Style Alert Confirm Box using jQuery</a>
+			</div>
+		</li>
+		<li>
+			<div>
+				5) <a href="http://www.2lessons.info/2011/12/facebook-like-red-notification-simple.html">facebook like red notification created using CSS only</a>
+			</div>
+		</li>
+		<li>
+			<div>
+				6) <a href="http://www.2lessons.info/2012/09/how-to-create-google-like-top-bar-using.html">Google.com like top bar with drop down menu using CSS</a>
+			</div>
+		</li>
+		<li>
+			<div>
+				7) <a href="http://www.2lessons.info/2012/09/gmail-type-select-all-checkbox-using.html">Gmail type select all checkbox using jQuery</a>
+			</div>
+		</li>
+	</ul>
+</div>
+</body>
+</html>

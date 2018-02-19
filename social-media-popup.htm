@@ -1,0 +1,167 @@
+<style>
+
+	.pbox{
+		
+		display: block;
+		position: absolute;
+		z-index: 999999;
+	}
+	.popup{
+		background-color: #fff;
+		padding: 0px 0px;
+		border: 1px solid #BFBFBF;
+		text-align: center;
+		width:560px;
+		border-radius: 6px;
+		position: relative;
+		z-index: 999999;
+		text-align: left;
+		
+	}
+	.popup .header{
+		height: 35px;
+		border-bottom: 1px solid #BFBFBF;
+		background-color: #E5E5E5;
+	}
+	.popup .header .close{
+		padding: 8px;
+		float: right;
+		border-left: 1px solid #BFBFBF;
+		width: 122px;
+		padding-left: 15px;
+		background-image:url('img/close.png');
+		background-repeat:no-repeat;
+		background-position:85% 40%; 
+		color: #747474;
+	}
+	.popup .header .close:hover{
+		cursor: pointer;
+	}
+	.popup .main-container{
+		margin:10px;
+		padding: 5px 20px 20px 30px;
+		color: #fff;
+		background-color: #252120;
+		text-align: center;
+	}
+	.popup .main-container .facebook-button-container{
+		background-color: #233762;
+		border: 1px solid #4E71C1;
+		border-radius: 6px;
+		padding: 14px;
+		width: 100px;
+		margin: 20px auto;
+		
+	}
+	.popup .main-container h3{
+		font-size: 30px;
+		margin-bottom: 0px;
+	}
+	.popup .main-container .info{
+		font-size: 17px;
+		color:#AAAAAA;
+		margin-top: 0px;
+	}
+	.popup .footer{
+		height: 30px;
+		border-top: 1px solid #E9E9E9;
+		background-color: #fff;
+		color: #8B8B8B;
+		font-size: 13px;
+	}
+	.popup .footer .already{
+		padding-top: 8px;
+		float: left;
+		margin-left: 120px;
+	}
+	.popup .footer .close{
+		padding-top: 8px;
+		float: right;
+		width: 300px;
+		background-image:url('img/close-footer.png');
+		background-repeat:no-repeat;
+		background-position:55% 70%; 
+	}
+	.popup .footer .close:hover{
+		cursor: pointer;
+	}
+	#popup_overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	}
+	.popup_overlayBG {
+	opacity: 0.7;
+	z-index: 99999;
+	background-image: url('img/background.png');
+	}
+</style>
+<div class="pbox">
+<div id="social-popup" class="popup" style="display:none;">
+	<div class="header">
+		<div class="close">
+			CLOSE THIS
+		</div>
+	</div>
+	<div class="main-container">
+		<h3>LIKE WHAT YOU JUST SAW?</h3>
+		<p class="info">LIKE US ON FACEBOOK TO STAY UPDATED ON MORE</p>
+		<div class="facebook-button-container">
+			<div class="fb-like" data-href="https://facebook.com/codenx2" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="already">ALREADY LIKE US?</div>
+		<div class="close"><span id="dont-show">DON'T SHOW THIS AGAIN</span></div>
+	</div>
+</div>
+</div>
+<div id="popup_overlay" class="popup_overlayBG" style="display: none; opacity: 0.7; "></div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+<script>
+	$(function(){
+		//sessionStorage.overlay = 0;
+	if(!window.sessionStorage.overlay){
+	sessionStorage.overlay = 0;
+	}
+	if(sessionStorage.overlay < 1){	
+		var t=setTimeout(function(){
+			$('#popup_overlay').show();
+			$('#social-popup').animate({"top": "-=100px"}, 'slow').show();
+		},1000);
+	}
+	$('.close').click(function(){
+		$('#popup_overlay').hide();
+		$('#social-popup').animate({"top": "-=100px"}, 'slow',function(){$(this).fadeOut();});
+	});
+	$('#dont-show').click(function(){
+		$('#social-popup').hide(1000);
+		$('#popup_overlay').hide(1000);
+		sessionStorage.overlay = 1;
+	});
+
+	jQuery.fn.center = function(parent) {
+    parent = window;
+    this.css({
+        "position": "absolute",
+        "top": ((($(parent).height() - this.outerHeight()) / 2) + $(parent).scrollTop() + "px"),
+        "left": ((($(parent).width() - this.outerWidth()) / 2) + $(parent).scrollLeft() + "px")
+    });
+return this;
+}
+
+$("div.popup").center(false);
+	});
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>

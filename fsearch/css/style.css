@@ -1,0 +1,80 @@
+/**
+* fSearch 1.0 - jQuery plugin for facebook type search suggestions
+*
+* http://www.codenx.com/
+*
+* Copyright (c) 2013 Ipsita Sahoo 
+*/
+*{ 
+	font-family:"trebuchet MS",verdana ;
+	font-size: 16px;
+}
+ul{ 
+	list-style::none;margin:0pt;padding:0pt;
+}
+h1{
+	margin-bottom: 0;
+	font-size: 1.17em;
+}
+p{
+	margin-top: 0;
+}
+.container{
+	width:700px;
+	margin:100px auto;
+}
+#searchInput
+{
+	width:350px;
+	border:solid 1px #dedede;
+	padding:3px;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	-moz-border-top-right-radius: 6px;
+	-moz-border-top-left-radius: 6px;
+	box-shadow: 0px 0px 5px #999;
+	border-width: 1px 1px 0px;
+	border-style: solid;
+	border-color: #efefef #DEDEDE #DEDEDE;
+	background-color: white;
+}
+#divResult
+{
+	position:absolute;
+	width:348px;
+	display:none;
+	margin-top:-1px;
+	border:solid 1px #dedede;
+	border-top:0px;
+	overflow:hidden;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	-moz-border-bottom-right-radius: 6px;
+	-moz-border-bottom-left-radius: 6px;
+	box-shadow: 0px 0px 5px #999;
+	border-width: 0px 1px 1px;
+	border-style: solid;
+	border-color: #eeeeee #DEDEDE #DEDEDE;
+	background-color: white;
+}
+#divResult ul li{
+	padding:4px; border-top:solid 1px #dedede; 
+	height:50px;
+}
+#divResult ul li:hover{
+	cursor: pointer;
+}
+#divResult ul li.selected{
+	background:#1BA1E2;
+	color:#FFFFFF;
+	cursor:pointer;
+}
+#divResult div#search-footer{
+	height: 15px;
+	text-align: center;
+	padding: 5px 0 10px 0;
+	background-color:#e2e2e2; 
+}
+#divResult ul li img.profile_image{
+	width:50px; height:50px; float:left; margin-right:6px;
+}

@@ -1,0 +1,71 @@
+We find E-Commerce mega menu in almost all online shopping websites where they display the all their available category of products. We will design the database and use AngularJS to easily present the menu to the user with some interactions.
+
+Today we are going to create a similar megamenu using 
+
+HTML with Bootstrap 3* (For easy styling and user interactivity)
+AngularJS (Model View Whatever Javascript framework to write the application logic) 
+MySQL (Database)
+PHP (Our server side programming language for providing data from MySQL database to AngularJS Application)
+PHPSlim (A PHP framework to easily create ReSTFul web services) [Optional]
+
+
+The directory structure of our application as follows
+
+angularcode-megamenu
+	api ----------------------- Out ReSTFul API end point
+		libs ------------------ Contains all PHPSlim library files
+		v1 -------------------- Current version of our ReST routes from where data is served
+			.htaccess --------- Apache rules
+			config.php -------- Contains our database configurations
+			dbHelper.php ------ A database helper function
+			index.php --------- The main file of our api from where our API runs
+	app ----------------------- Contains all our custom AngularJS files
+		app.js ---------------- The only AngularJS file we require for this project
+	css ----------------------- Stylesheets
+		bootstrap.min.css ----- Here i used Bootstrap v3.3.2
+		megamenu.css ---------- Some custom styling to generate the frontend of our megamenu
+	libs ---------------------- All libraries required by our project
+		angular.js ------------ In this project we require only AngularJS
+	index.html ---------------- The main file from where our application starts
+
+You can download a copy of the whole project from the above download link.
+To run the project 
+
+	Install Apache, PHP, MySQL (I used WAMP on a windows machine) 
+	Activate Apache rewrite module
+	Download and unzip the code file provided you as zip archive into your apache root folder.
+	Import the angularcode_megamenu.sql file into MySQL which will automatically create a new database named angularcode_megamenu and a table named megamenu in your MySQL database
+
+If you face any issue while creating the above ReST API, probably you misconfigured the Apache, PHP, MySQL or rewrite module is not working properly
+
+Now lets understand the working principle. How things work together.
+
+First lets design the databse structure for our proejct
+Database - categories 
+
+
+We will first create the ReST API required for our project
+
+config
+
+dbHelper.php
+
+index.php
+
+Now our API is ready. You can test the API by browsing http://localhost/angularcode-megamenu/api/v1/categories
+
+This should show all the categories with corresponding subcategories.
+
+The job now is to show up the data to the user as a megamenu
+For that we need to include bootstrap and angularjs into our project. Our index.html files will now look like the following.
+
+index.html
+
+The index file contains one file named app/app.js which contains our AngularJS Javascript code of our application
+
+app.js
+
+megamenu.css
+The stylesheet which presents the megamenu to the user and expands the child nodes when user hovers over the parent menu item.
+
+We are done with creating a megamenu using AngularJS. Feel free to leave any comment bellow.
