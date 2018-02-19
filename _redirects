@@ -1,5 +1,17 @@
 # Redirect with a 301
 /home         /              301
-
-# Redirect with a 301
-http://angularcode.com/inventory-manager-using-angularjs-mysql-php/  https://www.angularcode.com/product-inventory-manager-using-angularjs-mysql-and-php-restful-api/             301
+/inventory-manager-using-angularjs-mysql-php/  /product-inventory-manager-using-angularjs-mysql-and-php-restful-api/             301
+/product-inventory-management-using-angularjs-mysql-and-php-restful-api/  /product-inventory-manager-using-angularjs-mysql-and-php-restful-api/             301
+/project-demo-send-mail-using-nodejs/  /simple-project-demonstrates-how-to-send-email-using-nodejs/             301
+/appointment-booking-with-angularjs-nodejs-mongodb/  /appointment-booking-using-angularjs-nodejs-mongodb/             301
+/appointment-booking-using-angularjs-nodejs-mongodb/embed/  /appointment-booking-using-angularjs-nodejs-mongodb/             301
+/simple-task-manager-application-using-angular-js-php-mysql/  /simple-task-manager-application-using-angularjs-php-mysql/             301
+/simple-file-upload-example-using-angularjs/embed/  /simple-file-upload-example-using-angularjs/             301
+/send-email-from-website-using-angularjs-and-nodejs/  /simple-project-demonstrates-how-to-send-email-using-nodejs/             301
+/setup-php-cron-jobs-at-godaddy/  /steps-to-configure-php-cron-jobs-godaddy/             301
+/generate-pdf-from-mysql-database-using-php/  /generate-pdf-using-php-from-mysql-database/             301
+/configure-amazon-ec2-for-nodejs-app-deployment/  /steps-to-configure-amazon-ec2-for-nodejs-app-deployment/             301
+/category/php/  /tag/php/             301
+/category/angularjs/  /tag/angularjs/             301
+/category/mysql/  /tag/mysql/             301
+/category/nodejs/  /tag/nodejs/             301
